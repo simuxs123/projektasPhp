@@ -6,10 +6,10 @@ $data=[
     ["klase"=>"5d","vardas"=>"Jonas","pavarde"=>"Jonaitis","pazymiai"=>[5,10,9]],
     ["klase"=>"5e","vardas"=>"Petras","pavarde"=>"Petraitis","pazymiai"=>[2,5,4]],
 ];
-$moksleiviai=[];
+$students=[];
 foreach ($data as $val){
-        $moksleivis=new Student($val['klase'],$val['vardas'],$val['pavarde'],$val['pazymiai']);
-        array_push($moksleiviai,$moksleivis->showList());
+        $student=new Student($val['klase'],$val['vardas'],$val['pavarde'],$val['pazymiai']);
+        array_push($students,$student->showList());
 }
 
 
@@ -36,9 +36,9 @@ foreach ($data as $val){
         <th>Duomenų formavimo data</th>
     </tr>
     </thead>
-    <?php foreach($moksleiviai as $moksleivis): ?>
+    <?php foreach($students as $stud): ?>
         <tr>
-            <?php foreach($moksleivis as $value):?>
+            <?php foreach($stud as $value):?>
             <td><?=$value?></td>
             <?php endforeach;?>
         </tr>
