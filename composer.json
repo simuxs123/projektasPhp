@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "name": "Student",
+    "description": "Student",
+    "psr-4": {
+      "StudentApp\\": "app"
+    }
+  }
+}
